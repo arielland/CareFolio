@@ -1,0 +1,73 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+.vercel
+.env*
+
+# Keep this last: gitignore resolves by last match, and tooling (the Vercel/Supabase
+# CLI) appends `.env*` here on install. The template is documentation, not a secret.
+!.env.example
+
+client_secret_google_oauth.json
+
+.env*
+
+# Personal Claude Code settings; launch.json is shared and stays tracked.
+.claude/settings.local.json
+
+# Re-asserted after the tooling-appended `.env*` above, which would otherwise
+# re-ignore the template. Harmless while the file is tracked, but keeps
+# `git status` honest for anyone cloning fresh.
+!.env.example
+
+# Real medical documents, and anything derived from them.
+#
+# A named person's oncology records, sitting on disk from the local-OCR benchmarking
+# (see the archive branch). They outlive the code that read them, so this rule lives on
+# every branch that could plausibly run `git add -A` — one branch without it is all it takes.
+/test_files
+/fixtures
+
+# The default local home for LOG_DIR. Application logs carry no health content — the
+# logger's allowlist sees to that — but they do carry space and request ids, and a log
+# file is not something to hand to `git add -A`.
+/var

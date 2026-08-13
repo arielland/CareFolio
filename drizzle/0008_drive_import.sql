@@ -1,0 +1,1 @@
+ALTER TABLE "spaces" ADD COLUMN "drive_import_enabled" boolean DEFAULT false NOT NULL;

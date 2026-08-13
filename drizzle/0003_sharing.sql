@@ -1,0 +1,1 @@
+ALTER TABLE "space_members" ADD COLUMN "removal_requested_at" timestamp with time zone;
