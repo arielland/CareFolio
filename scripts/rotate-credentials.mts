@@ -231,8 +231,8 @@ async function main() {
   heading('Done here — now the console half');
   console.log('1. Google Cloud Console → Credentials → add a new client secret, update');
   console.log('   AUTH_GOOGLE_SECRET locally and in the deployment, then delete the old secret.');
-  console.log('2. Supabase → JWT keys → rotate, then remove SUPABASE_SERVICE_ROLE_KEY and');
-  console.log('   SUPABASE_SECRET_KEY from every environment (SEC-04: the app never uses them).');
+  console.log('2. Supabase → JWT keys → rotate. Removing SUPABASE_SERVICE_ROLE_KEY and');
+  console.log('   SUPABASE_SECRET_KEY from the environment hides them; only this retires them.');
   console.log('3. Rotate AUTH_SECRET. Safe now rather than before — with the sessions table');
   console.log('   already empty there is nothing left for it to invalidate.');
   console.log('4. Each space admin reconnects Google from the home screen.');
